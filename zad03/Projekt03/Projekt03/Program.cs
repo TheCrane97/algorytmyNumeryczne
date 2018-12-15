@@ -47,6 +47,9 @@ namespace Projekt03
             X=MonteCarlo.GenerujMonte(m1);
             X.WyswietlWektor();
 
+
+            
+
         }
     }
 }

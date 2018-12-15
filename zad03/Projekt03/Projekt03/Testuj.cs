@@ -8,7 +8,7 @@ namespace Projekt03
 {
     class Testuj
     {
-        public static void GaussaBWP(Macierz test, Wektor X)
+        public static void CzyDobrzeObliczyloWektor(Macierz test, Wektor X)
         {
             double[] wynik = new double[test.rozmiarMacierzy];
 
