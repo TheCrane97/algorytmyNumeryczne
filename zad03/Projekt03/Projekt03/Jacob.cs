@@ -48,7 +48,7 @@ namespace Projekt03
 
                 }
                 z++;
-                Console.WriteLine(z);
+               // Console.WriteLine(z);
             } while (X1.ObliczBladZ(X2)>precyzja);
 
             //Blad to roznica wektora X1 i X2

@@ -8,7 +8,7 @@ namespace Projekt03
 {
     class Seidel
     {
-        public static Wektor seidel(Macierz M,Wektor V, int p) //M=kopia / V=wektor kopia (same 0 i 1 na koncu) / p=precyzja na -10 itp
+        public static Wektor Seid(Macierz M,Wektor V, int p) //M=kopia / V=wektor kopia (same 0 i 1 na koncu) / p=precyzja na -10 itp
         {
             //Nasz wynik i pomoc do obliczania prezycji	
             Wektor X1 = new Wektor(M.rozmiarMacierzy);
@@ -38,7 +38,7 @@ namespace Projekt03
                     X1.wektor[i] = suma1 / M.macierz[i, i];
                 }
 
-            } while (X1.ObliczBladZ(X2) < precyzja);
+            } while (X1.ObliczBladZ(X2) > precyzja);
 
 
             return X1;
