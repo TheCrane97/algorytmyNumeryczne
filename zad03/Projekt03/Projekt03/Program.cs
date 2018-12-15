@@ -62,7 +62,7 @@ namespace Projekt03
 
             ////przyklad.WyswietlMacierz();
 
-            X =Jacob.Jacobe(m1, w1, -3);
+            X =Jacob.Jacobe(m2, w1, -13);
             X.WyswietlWektor();
             
 
