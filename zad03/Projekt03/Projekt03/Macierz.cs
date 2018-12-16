@@ -155,5 +155,24 @@ namespace Projekt03
             }
         }
 
+        public void ZapiszDoPliku()
+        {
+            string text="";
+            for (int i = 0; i < rozmiarMacierzy; i++)
+            {
+                for (int j = 0; j < rozmiarMacierzy; j++)
+                {
+                    text += Convert.ToString(macierz[i,j]) + ";";
+                    
+                }
+                text += "\r\n";
+                System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", text);
+                text = "";
+            }
+
+            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
+            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
+        }
+
     }
 }

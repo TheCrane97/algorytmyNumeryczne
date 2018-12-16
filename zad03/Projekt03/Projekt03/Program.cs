@@ -11,7 +11,7 @@ namespace Projekt03
     {
         static void Main(string[] args)
         {
-            int rozmiar = 5;
+            int rozmiar = 20;
             Macierz m1 = new Macierz(rozmiar);
             Macierz m2 = new Macierz(rozmiar);
             Wektor w1 = new Wektor(m1.rozmiarMacierzy);
@@ -22,33 +22,38 @@ namespace Projekt03
 
             m1.OdejmijJedynki();
             m1.SkopiujDo(m2);
-           // m2.WyswietlMacierz();
+            m2.ZapiszDoPliku();
 
             Gauss gauss = new Gauss(m1.macierz, w1.wektor, m2.macierz, w2.wektor, m1.rozmiarMacierzy);
 
             Console.WriteLine("JACOB----------------------------------------");
             X =Jacob.Jacobe(m2, w1, -13);
             X.WyswietlWektor();
+            X.ZapiszDoPliku();
 
             Console.WriteLine("SEIDEL----------------------------------------");
             X = Seidel.Seid(m1, w1, -13);
             X.WyswietlWektor();
+            X.ZapiszDoPliku();
 
             Console.WriteLine("GAUSS Z CZESCIOWYM  WYBOREM ELEMENTU PODSTAWOWEGO----------------------------------------");
             X = gauss.GaussCWP();
             X.WyswietlWektor();
+            X.ZapiszDoPliku();
 
             Console.WriteLine("GAUSS BEZ  WYBORU ELEMENTU PODSTAWOWEGO----------------------------------------");
             X=gauss.GaussBWP();
             X.WyswietlWektor();
+            X.ZapiszDoPliku();
 
 
             Console.WriteLine("MONTE CARLO----------------------------------------");
             X=MonteCarlo.GenerujMonte(m1);
             X.WyswietlWektor();
+            X.ZapiszDoPliku();
 
 
-            
+
 
         }
     }

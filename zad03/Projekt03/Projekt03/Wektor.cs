@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,20 @@ namespace Projekt03
 
 
             return wynik;
+        }
+
+
+        public void ZapiszDoPliku()
+        {
+            string text;
+            for (int i=0;i<rozmiar;i++)
+            {
+                text = Convert.ToString(wektor[i]) + "\r\n";
+                System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", text);
+            }
+
+            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
+            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
         }
     }
 }
