@@ -18,7 +18,7 @@ namespace Projekt03
             int iloscWykonan = 100000;
 
             wynik.WyzerujWektor();
-            int tak, nie, nw;
+            int tak, nie, nw,s1,s2;
 
             double[] wektor = new double[m.iloscAgentow];
             double[] kopia = new double[m.iloscAgentow];
@@ -50,8 +50,8 @@ namespace Projekt03
                     choice = true;
                     do
                     {
-                        int s1 = r.Next(m.iloscAgentow);
-                        int s2 = r.Next(m.iloscAgentow);
+                        s1 = r.Next(m.iloscAgentow);
+                        s2 = r.Next(m.iloscAgentow);
                         if (kopia[s1] == 0 && kopia[s2] == 2 || kopia[s1] == 2 && kopia[s2] == 0)
                         {
                             kopia[s1] = 0;
@@ -87,7 +87,7 @@ namespace Projekt03
         public static bool Jest(double [] w, double liczba)
         {
             int size = w.Count() - 1;
-            while (size > 0)
+            while (size >= 0)
             {
                 if (w[size] == liczba)
                     return true;
