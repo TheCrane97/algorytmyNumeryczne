@@ -21,7 +21,7 @@ namespace Projekt03
                 }
             }
 
-            string path = Path.GetFullPath("odp.txt");
+            string path = Path.GetFullPath("test.txt");
             string text = "";
             Console.WriteLine();
             Console.WriteLine();
