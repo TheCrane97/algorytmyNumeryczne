@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,16 @@ namespace Projekt03
                 }
             }
 
+            string path = Path.GetFullPath("odp.txt");
+            string text = "";
             Console.WriteLine();
             Console.WriteLine();
             for (int i = 0; i < test.rozmiarMacierzy; i++)
+            {
                 Console.WriteLine(wynik[i]);
+                text = Convert.ToString(wynik[i])+"\r\n";
+                System.IO.File.AppendAllText(@path, text);
+            }
         }
     }
 }
