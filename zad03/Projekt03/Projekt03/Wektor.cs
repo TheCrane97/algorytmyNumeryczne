@@ -69,14 +69,16 @@ namespace Projekt03
         public void ZapiszDoPliku()
         {
             string text;
+            string path =Path.GetFullPath("odp.txt");
+
             for (int i=0;i<rozmiar;i++)
             {
                 text = Convert.ToString(wektor[i]) + "\r\n";
-                System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", text);
+                System.IO.File.AppendAllText(@path, text);
             }
 
-            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
-            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
+            System.IO.File.AppendAllText(@path, "\r\n");
+            System.IO.File.AppendAllText(@path, "\r\n");
         }
     }
 }

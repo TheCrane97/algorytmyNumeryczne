@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -158,6 +159,7 @@ namespace Projekt03
         public void ZapiszDoPliku()
         {
             string text="";
+            string path = Path.GetFullPath("odp.txt");
             for (int i = 0; i < rozmiarMacierzy; i++)
             {
                 for (int j = 0; j < rozmiarMacierzy; j++)
@@ -166,12 +168,12 @@ namespace Projekt03
                     
                 }
                 text += "\r\n";
-                System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", text);
+                System.IO.File.AppendAllText(@path, text);
                 text = "";
             }
 
-            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
-            System.IO.File.AppendAllText(@"D:\Uczelnia\semestr_5\algorytmyNumeryczne\zad03\odp.txt", "\r\n");
+            System.IO.File.AppendAllText(@path, "\r\n");
+            System.IO.File.AppendAllText(@path, "\r\n");
         }
 
     }
