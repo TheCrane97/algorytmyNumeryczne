@@ -65,6 +65,26 @@ namespace Projekt03
             return wynik;
         }
 
+        public double WyliczanieDlugosciWektora(Wektor w2)
+        {
+
+            double m = 0;
+            double m2 = 0;
+            for (int i = 0; i < rozmiar; i++)
+            {
+                m += wektor[i]* wektor[i];
+                m2 += w2.wektor[i] * w2.wektor[i];
+            }
+            double wynik;
+            double wynik2;
+            wynik = Math.Sqrt(m);
+            wynik2 = Math.Sqrt(m2);
+
+            if (wynik - wynik2 > 0)
+                return wynik - wynik2;
+            else
+                return (-1) * (wynik - wynik2);
+        }
 
         public void ZapiszDoPliku()
         {

@@ -15,7 +15,7 @@ namespace Projekt03
             bool choice = true;
             Random r = new Random();
 
-            int iloscWykonan = 100000;
+            int iloscWykonan = 10000;
 
             wynik.WyzerujWektor();
             int tak, nie, nw,s1,s2;
