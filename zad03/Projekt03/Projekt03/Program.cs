@@ -13,7 +13,7 @@ namespace Projekt03
     {
         static void Main(string[] args)
         {
-            for (int rozmiar = 4; rozmiar <= 20; rozmiar++)
+            for (int rozmiar = 19; rozmiar <= 21; rozmiar++)
             {
                 Macierz m1 = new Macierz(rozmiar);
                 Macierz m2 = new Macierz(rozmiar);
